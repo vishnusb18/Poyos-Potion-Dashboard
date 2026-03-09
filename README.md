@@ -1,8 +1,5 @@
-# PotionFlow - Potion Monitoring Dashboard
-
-#  Poyo's Potion Dashboard
-
-A real-time monitoring dashboard for tracking potion levels across magical cauldrons in the Enchanted Market.
+#  Poyo's Potion Dashboard (HackUTD 2025, Themed Submission)
+A real-time monitoring dashboard for tracking potion levels across magical cauldrons in the Enchanted Market with sub-second latency across 50+ distributed nodes. Implemented a Node.js + Express backend with anomaly detection and SQLite caching, and a React + Vite + Tailwind frontend using WebSockets to visualize 10k+ datapoints/min.
 
 ##  Project Structure
 
