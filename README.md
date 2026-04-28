@@ -1,6 +1,16 @@
 #  Poyo's Potion Dashboard (HackUTD 2025, Themed Submission)
 A real-time monitoring dashboard for tracking potion levels across magical cauldrons in the Enchanted Market with sub-second latency across 50+ distributed nodes. Implemented a Node.js + Express backend with anomaly detection and SQLite caching, and a React + Vite + Tailwind frontend using WebSockets to visualize 10k+ datapoints/min.
 
+##  Features
+
+- **HackUTD API Integration**: Fetches live data from `https://hackutd2025.eog.systems`
+- **Cauldron Management**: Track all cauldrons with location, capacity, and fill rates
+- **Real-time Level Monitoring**: View current potion levels across all cauldrons
+- **Transport Ticket Tracking**: Log and review all potion collection tickets
+- **Discrepancy Detection**: Automatically detect drains and match with tickets
+- **Dashboard UI**: Responsive dashboard with multiple views
+- **Data Processing**: Backend proxies and processes HackUTD API data
+
 ##  Project Structure
 
 ```
@@ -34,7 +44,7 @@ HACK-UTD-2025/
 
 ## API Integration
 
-**This app connects to the REAL HackUTD 2025 API.**
+**This app connects to the HackUTD 2025 API.**
 
 - **Base URL**: `https://hackutd2025.eog.systems`
 - **Swagger Docs**: https://hackutd2025.eog.systems/swagger/index.html
@@ -90,16 +100,6 @@ Detect drain events and match with transport tickets
   "details": [...]
 }
 ```
-
-##  Features
-
-- **Real HackUTD API Integration**: Fetches live data from `https://hackutd2025.eog.systems`
-- **Cauldron Management**: Track all cauldrons with location, capacity, and fill rates
-- **Real-time Level Monitoring**: View current potion levels across all cauldrons
-- **Transport Ticket Tracking**: Log and review all potion collection tickets
-- **Discrepancy Detection**: Automatically detect drains and match with tickets
-- **Dashboard UI**: Responsive dashboard with multiple views
-- **Data Processing**: Backend proxies and processes HackUTD API data
 
 ##  Database Schema
 
