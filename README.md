@@ -32,59 +32,9 @@ HACK-UTD-2025/
 └── README.md
 ```
 
-## 🚀 Quick Start
+## API Integration
 
-### Prerequisites
-
-- **Node.js** (v18 or higher)
-- **npm** (comes with Node.js)
-
-### Backend Setup
-
-1. Navigate to the backend directory:
-   ```powershell
-   cd backend
-   ```
-
-2. Install dependencies:
-   ```powershell
-   npm install
-   ```
-
-3. Initialize the database with sample data:
-   ```powershell
-   npm run init-db
-   ```
-
-4. Start the backend server:
-   ```powershell
-   npm start
-   ```
-
-   The API will be available at `http://localhost:3001`
-
-### Frontend Setup
-
-1. Open a **new terminal** and navigate to the frontend directory:
-   ```powershell
-   cd frontend
-   ```
-
-2. Install dependencies:
-   ```powershell
-   npm install
-   ```
-
-3. Start the development server:
-   ```powershell
-   npm run dev
-   ```
-
-   The dashboard will be available at `http://localhost:3000`
-
-## 📡 API Integration
-
-**This app now connects to the REAL HackUTD 2025 API!** 🎉
+**This app connects to the REAL HackUTD 2025 API.**
 
 - **Base URL**: `https://hackutd2025.eog.systems`
 - **Swagger Docs**: https://hackutd2025.eog.systems/swagger/index.html
@@ -95,9 +45,9 @@ HACK-UTD-2025/
 - `GET /api/Data?start_date=X&end_date=Y` - Historical level data
 - `GET /api/Tickets` - Transport tickets
 
-### Your Backend API Endpoints (Proxy)
+### Backend API Endpoints (Proxy)
 
-Your backend (`http://localhost:3001`) proxies and processes the HackUTD API:
+Backend (`http://localhost:3001`) proxies and processes the HackUTD API:
 
 ### GET `/api/cauldrons`
 Get all cauldrons with their properties (location, capacity, fill rates)
@@ -143,24 +93,13 @@ Detect drain events and match with transport tickets
 
 ##  Features
 
-###  Implemented
-
 - **Real HackUTD API Integration**: Fetches live data from `https://hackutd2025.eog.systems`
 - **Cauldron Management**: Track all cauldrons with location, capacity, and fill rates
 - **Real-time Level Monitoring**: View current potion levels across all cauldrons
 - **Transport Ticket Tracking**: Log and review all potion collection tickets
 - **Discrepancy Detection**: Automatically detect drains and match with tickets
-- **Dashboard UI**: Beautiful, responsive dashboard with multiple views
+- **Dashboard UI**: Responsive dashboard with multiple views
 - **Data Processing**: Backend proxies and processes HackUTD API data
-
-###  Ready for Extension (Bonus Features)
-
-The base structure is ready for these enhancements:
-- **Potion Network Map**: Visualize cauldrons and routes on a map
-- **Real-time Updates**: WebSocket integration for live monitoring
-- **Forecasting**: Predict fill levels and overflow times
-- **Route Optimization**: Calculate optimal witch courier routes
-- **Alert System**: Notifications for critical levels or discrepancies
 
 ##  Database Schema
 
@@ -186,7 +125,7 @@ The base structure is ready for these enhancements:
 - `date`: Collection date
 - `volume_collected`: Amount collected (L)
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 **Backend:**
 - Node.js + Express
@@ -215,46 +154,6 @@ npm run build   # Build for production
 npm run preview # Preview production build
 ```
 
-##  Dashboard Features
-
-1. **Overview Tab**: Summary stats and current cauldron status
-2. **Cauldrons Tab**: Detailed view of all cauldrons with fill percentages
-3. **Tickets Tab**: Searchable list of transport tickets
-4. **Reconcile Tab**: Run discrepancy detection for any date
-
-##  Data Source
-
-The app now fetches **REAL DATA** from the HackUTD 2025 API:
-- **Live Cauldrons**: Actual cauldron configurations from the competition
-- **Historical Data**: Real potion level readings over time
-- **Transport Tickets**: Actual collection records for validation
-
-##  Troubleshooting
-
-**Backend won't start:**
-- Make sure port 3001 is not in use
-- Run `npm run init-db` to create the database
-
-**Frontend can't connect to backend:**
-- Ensure backend is running on port 3001
-- Check Vite proxy configuration in `vite.config.js`
-
-**Database errors:**
-- Delete `backend/database/potionflow.db` and run `npm run init-db` again
-
-##  Hackathon Notes
-
-This is the base setup for the HACK UTD 2025 PotionFlow project. The structure is designed to be easily extended with:
-- Real API integration for actual data
-- Map visualization libraries (Leaflet, Mapbox)
-- WebSocket for real-time updates
-- Advanced analytics and ML forecasting
-- Route optimization algorithms
-
 ## 📄 License
 
 MIT License 
-
----
-
-Made with  magic for HACK UTD 2025
